@@ -113,26 +113,16 @@ class _AddUserPageState extends State<AddUserPage> {
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Align(
                 alignment: Alignment.bottomRight,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    TextButton(
-                      onPressed: () => Navigator.pop(context),
-                      child: const Text("Cancel"),
-                    ),
-                    const SizedBox(width: 16),
-                    SizedBox(
-                      height: 50,
-                      width: 150,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          _addUser();
-                          Navigator.pop(context);
-                        },
-                        child: const Text("Add User"),
-                      ),
-                    ),
-                  ],
+                child: SizedBox(
+                  height: 50,
+                  width: 150,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      _addUser();
+                      Navigator.pop(context);
+                    },
+                    child: const Text("Add User"),
+                  ),
                 ),
               ),
             ),
